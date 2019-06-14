@@ -30,8 +30,8 @@ function getHtml(template) {
                 var prefix = commonPrefix.Prefix;
                 var albumName = decodeURIComponent(prefix.replace('/', ''));
                 return getHtml([
-                    '<li>',
-                    '<button style="margin:5px;" onclick="viewAlbum(\'' + albumName + '\')">',
+                    '<li class="col-lg-3 col-md-4 col-sm-6 mb-3">',
+                    '<button class="bg_pink text-white" onclick="viewAlbum(\'' + albumName + '\')">',
                     albumName,
                     '</button>',
                     '</li>'
@@ -39,17 +39,18 @@ function getHtml(template) {
                 viewAlbum('"' + albumName + '"');
             });
             var htmlTemplate = [
-                '<h2>Albums</h2>',
-                '<ul>',
+                '<ul class="row">',
                 getHtml(albums),
                 '</ul>',
             ]
             document.getElementById('viewer').innerHTML = getHtml(htmlTemplate);
+            $('#loader-wrapper2').fadeOut('slow');
         }
     });
 })();
 
 function viewAlbum(albumName, page = 1) {
+    $('#loader-wrapper3').fadeIn('slow');
     // console.log("the perameters", albumName, page)
     var albumPhotosKey = encodeURIComponent(albumName) + '/';
     s3.listObjects({ Prefix: albumPhotosKey }, function (err, data) {
@@ -71,7 +72,6 @@ function viewAlbum(albumName, page = 1) {
                     photoKey.replace(albumPhotosKey, ''),
                     '</td>',
                     '<td>',
-                    '<br/>',
                     '<a class="download_certificate text_orange" href="' + photoUrl + '" download="' + photoKey.replace(albumPhotosKey, '') + '"><i class="fa fa-download" aria-hidden="true"></i>Download</a>',
                     '</td>',
                     '</tr>',
@@ -85,12 +85,15 @@ function viewAlbum(albumName, page = 1) {
         // console.log("pageArray in js file", pageArray);
         var pages = pageArray.map(function (val, index) {
             return getHtml([
-                '<li><a href="javascript:viewAlbum(\'' + albumName + '\','+(index+1)+');">'+(index+1)+'</a></li>',
+                '<li id="page_'+(index+1)+'"><a href="javascript:viewAlbum(\'' + albumName + '\','+(index+1)+');">'+(index+1)+'</a></li>',
             ])
         })
         var htmlTemplate = [
-            '<div>',
-            '<table>',
+            '<div id="loader-wrapper3" style="display: none;">',
+            '<div id="loader3"></div>',
+            '</div>',
+            '<div class="table-responsive">',
+            '<table class="table table-bordered table-striped">',
             '<thead>',
             '<tr>',
             '<th>Name</th>',
@@ -111,5 +114,8 @@ function viewAlbum(albumName, page = 1) {
             '</div>',
         ]
         document.getElementById('tableData').innerHTML = getHtml(htmlTemplate);
+        $('#loader-wrapper3').fadeOut('slow');
+        $('.page_pagination ul li').removeClass('active');
+        $('.page_pagination ul li#page_'+page).addClass('active');
     });
 }

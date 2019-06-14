@@ -79,11 +79,10 @@
 						<div class="right_side_menu">
 							<ul class="navbar-nav ml-lg-auto">
 								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle active" href="javascript:void(0);"
-										id="navbardrop_forms" data-toggle="dropdown">Forms</a>
+									<a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbardrop_forms"
+										data-toggle="dropdown">Forms</a>
 									<div class="dropdown-menu">
-										<a class="dropdown-item active"
-											href="javascript:routeTo('admissionInquiry')">Admission
+										<a class="dropdown-item" href="javascript:routeTo('admissionInquiry')">Admission
 											Inquiry</a>
 										<a class="dropdown-item"
 											href="javascript:routeTo('transferCertificateApplicationForm')">Transfer
@@ -97,13 +96,13 @@
 									</div>
 								</li>
 								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbardrop_resources" data-toggle="dropdown">Resources</a>
+									<a class="nav-link dropdown-toggle active" href="javascript:void(0);" id="navbardrop_resources" data-toggle="dropdown">Resources</a>
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="javascript:routeTo('resources')">Academic Calender</a>
 										<a class="dropdown-item" href="javascript:routeTo('resources')">CBSE Affiliation Letter</a>
 										<a class="dropdown-item" href="javascript:routeTo('resources')">OASIS 2018-2019</a>
 										<a class="dropdown-item" href="javascript:routeTo('resources')">Ataff Information for CBSE</a>
-										<a class="dropdown-item" href="javascript:routeTo('transferCertificates')">Transfer Certificates</a>
+										<a class="dropdown-item active" href="javascript:routeTo('transferCertificates')">Transfer Certificates</a>
 									</div>
 								</li>
 								<li class="nav-item">
@@ -121,212 +120,34 @@
 			<div class="row">
 				<div class="col-lg-7">
 					<div class="page_title">
-						<h1>Admission Inquiry</h1>
+						<h1>Transfer Certificates</h1>
 					</div>
 				</div>
 				<div class="col-lg-5">
 					<div class="d-flex flex-wrap align-content-center" style="height: 100%;">
 						<ul>
 							<li><a href="javascript:routeTo('index')" class="text-white">Home</a></li>
-							<li>Forms</li>
-							<li>Admission Inquiry</li>
+							<li><a href="javascript:routeTo('resources')" class="text-white">Resources</a></li>
+							<li>Transfer Certificates</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="intellectual_development_tab_section">
+	<section class="transferCertificate_section">
 		<div class="container">
-			<div id="development_tab" class="admission_inquiry" data-aos="fade-up" data-aos-duration="1000">
-				<ul class="development_tab_title row">
-					<li class="col-md-3 blue_arrow">
-						<a href="#tab-1">
-							<img src="images/tab_icon_one.png" alt="tab icon">
-							<p>Personal </br>Detail</p>
-						</a>
-					</li>
-					<li class="col-md-3 orange_arrow">
-						<a href="#tab-2">
-							<img src="images/tab_icon_two.png" alt="tab icon">
-							<p>Contact </br>Detail</p>
-						</a>
-					</li>
-					<li class="col-md-3 pink_arrow">
-						<a href="#tab-3">
-							<img src="images/tab_icon_three.png" alt="tab icon">
-							<p>Residence </br>Detail</p>
-						</a>
-					</li>
-					<li class="col-md-3 green_arrow">
-						<a href="#tab-4">
-							<img src="images/tab_icon_finish.png" alt="tab icon">
-							<p>Finish </br></p>
-						</a>
-					</li>
-				</ul>
-				<div class="development_tab_content blue_arrow">
-					<div id="tab-1">
-						<h4 class="text_blue">Student Detail</h4>
-						<div class="row">
-							<div class="form-group col-xl-3 col-lg-4 col-sm-6">
-								<input type="text" class="form-control" placeholder="Name Of Child *">
-							</div>
-							<div class="form-group col-xl-3 col-lg-4 col-sm-6">
-								<select class="form-control">
-									<option disabled selected>Seeking Admission in Std *</option>
-									<option>LKG</option>
-									<option>UKG</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
-								</select>
-							</div>
-							<div class="form-group col-xl-3 col-lg-4 col-sm-6">
-								<input type="text" class="form-control" id="datepicker" placeholder="Birthdate *">
-							</div>
-							<div class="form-group col-xl-3 col-lg-4 col-sm-6">
-								<input type="text" class="form-control" placeholder="Age *">
-							</div>
-							<div class="form-group col-xl-3 col-lg-4 col-sm-6">
-								<input type="text" class="form-control" placeholder="Current School/ Play House">
-							</div>
-							<div class="form-group col-xl-3 col-lg-4 col-sm-6">
-								<input type="text" class="form-control" placeholder="Father's Name *">
-							</div>
-							<div class="form-group col-xl-3 col-lg-4 col-sm-6">
-								<input type="text" class="form-control" placeholder="Mother's Name *">
-							</div>
-							<div class="form-group col-xl-3 col-lg-4 col-sm-6">
-								<select class="form-control">
-									<option disabled selected>How did you come to know</option>
-									<option>Magazine Article</option>
-									<option>News Paper Ad</option>
-									<option>Seminar</option>
-									<option>Hoading</option>
-									<option>Wall Painting</option>
-									<option>Pamplet</option>
-									<option>SMS</option>
-									<option>Existing Parent</option>
-									<option>Staff Member</option>
-									<option>Play House</option>
-									<option>Other</option>
-								</select>
-							</div>
-						</div>
-						<div class="two_btn_div">
-							<span class="next_step float-right text_orange">Next step!<i class="fa fa-long-arrow-right"
-									aria-hidden="true"></i></span>
-						</div>
-					</div>
-				</div>
-				<div class="development_tab_content orange_arrow">
-					<div id="tab-2">
-						<h4 class="text_orange">Contact Number</h4>
-						<div class="row">
-							<div class="form-group col-lg-4">
-								<input type="text" class="form-control" placeholder="Phone No. *">
-							</div>
-							<div class="form-group col-lg-4">
-								<input type="text" class="form-control" placeholder="Mobile No. *">
-							</div>
-							<div class="form-group col-lg-4">
-								<input type="text" class="form-control" placeholder="Resident No.">
-							</div>
-						</div>
-						<div class="two_btn_div">
-							<span class="prev_step float-left text_blue"><i class="fa fa-long-arrow-left"
-									aria-hidden="true"></i>Previous Step!</span>
-							<span class="next_step float-right text_pink">Next Step!<i class="fa fa-long-arrow-right"
-									aria-hidden="true"></i></span>
-						</div>
-					</div>
-				</div>
-				<div class="development_tab_content pink_arrow">
-					<div id="tab-3">
-						<h4 class="text_pink">Address</h4>
-						<div class="row">
-							<div class="form-group col-12">
-								<textarea class="form-control" placeholder="Address *"></textarea>
-							</div>
-						</div>
-						<div class="two_btn_div">
-							<span class="prev_step float-left text_orange"><i class="fa fa-long-arrow-left"
-									aria-hidden="true"></i>Previous Step!</span>
-							<span class="next_step float-right text_green">Next Step!<i class="fa fa-long-arrow-right"
-									aria-hidden="true"></i></span>
-						</div>
-					</div>
-				</div>
-				<div class="development_tab_content green_arrow">
-					<div id="tab-4">
-						<h4 class="text_green">Summary</h4>
-						<div class="table-responsive">
-							<table class="table table-striped">
-								<tr>
-									<th>Name Of Child</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Seeking Admission in Std</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Birthdate</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Age</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Current School/ Play House</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Father's Name</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Mother's Name</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>How did you come to know</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Phone No.</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Mobile No.</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Resident No.</th>
-									<td>value fill by the user</td>
-								</tr>
-								<tr>
-									<th>Address</th>
-									<td>value fill by the user</td>
-								</tr>
-							</table>
-						</div>
-						<div class="two_btn_div">
-							<span class="prev_step float-left text_pink"><i class="fa fa-long-arrow-left"
-									aria-hidden="true"></i>Previous Step!</span>
-							<button type="submit" class="submit_form float-right text_blue">Submit<i
-									class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-						</div>
-					</div>
+			<div class="section_title_type_one text-center">
+				<h3>Transfer Certificates</h3>
+				<img src="images/active_menu_icon.png" alt="icon image" class="aos-init">
+			</div>
+			<div id="loader-wrapper2">
+				<div id="loader2"></div>
+			</div>
+			<div id="viewer"></div>
+			<div id="tableData">
+				<div id="loader-wrapper3" style="display: none;">
+					<div id="loader3"></div>
 				</div>
 			</div>
 		</div>
@@ -433,6 +254,8 @@
 		</a>
 	</footer>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.473.0.js"></script>
+	<script type="text/javascript" src="js/PhotoLister.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
@@ -441,6 +264,6 @@
 	<script type="text/javascript" src="js/aos.js"></script>
 	<script type="text/javascript" src="js/jquery.responsiveTabs.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>	
+	<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>

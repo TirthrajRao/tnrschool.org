@@ -412,7 +412,7 @@ a.banner_btn {
     background-color: rgba(255,255,255,0.6);
     display: none!important;
 }
-#loader-wrapper {
+#loader-wrapper, #loader-wrapper2 {
     position: fixed;
     top: 0;
     left: 0;
@@ -421,9 +421,18 @@ a.banner_btn {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background-color: #303030
+    background-color: #303030;
 }
-#loader {
+#loader-wrapper3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 111;
+    background-color: rgba(48, 48, 48, 0.2);
+}
+#loader, #loader2 {
     display: block;
     position: absolute;
     left: 50%;
@@ -438,8 +447,21 @@ a.banner_btn {
     animation: spin 2s linear infinite;
     z-index: 1001;
 }
-
-#loader:before {
+#loader3{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    margin: -35px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f26f29;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    z-index: 110;
+}
+#loader:before, #loader2:before {
     content: "";
     position: absolute;
     top: 5px;
@@ -453,7 +475,7 @@ a.banner_btn {
     animation: spin 3s linear infinite;
 }
 
-#loader:after {
+#loader:after, #loader2:after {
     content: "";
     position: absolute;
     top: 15px;
@@ -1564,7 +1586,7 @@ a.download_certificate i{
     margin: 0px;
     padding: 0px;
 }
-.page_pagination ul li span, .page_pagination ul li a {
+.page_pagination ul li a {
     color: #333333;
     font-size: 16px;
     display: inline-block;
@@ -1575,10 +1597,14 @@ a.download_certificate i{
     border-radius: 4px;
     padding: 2px 0px;
 }
-.page_pagination ul li.active span, .page_pagination ul li a:hover {
+.page_pagination ul li.active a,
+.page_pagination ul li a:hover {
     background-color: #9ebe3b;
     color: #fff;
     border-color: transparent;
+}
+.page_pagination ul li.active a{
+    pointer-events: none;
 }
 .page_pagination ul li {
     display: inline-block;
@@ -1660,5 +1686,20 @@ label.upload_photo {
 .page_not_found h3{
     font-size: 36px;
     padding: 0px 0px 100px;
+}
+#viewer li {
+    list-style: none;
+}
+#viewer li button{
+    width: 100%;
+    padding: 6px 20px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 5px;
+}
+#tableData {
+    min-height: 100px;
+    position: relative;
 }
 /*after development changes css content end*/
