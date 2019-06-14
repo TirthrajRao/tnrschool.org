@@ -21,7 +21,7 @@ function getHtml(template) {
     return template.join('\n');
 }
 
-function listAlbums() {
+(function listAlbums() {
     s3.listObjects({ Delimiter: '/' }, function (err, data) {
         if (err) {
             return alert('There was an error listing your albums: ' + err.message);
@@ -47,7 +47,7 @@ function listAlbums() {
             document.getElementById('viewer').innerHTML = getHtml(htmlTemplate);
         }
     });
-}
+})();
 
 function viewAlbum(albumName, page = 1) {
     // console.log("the perameters", albumName, page)
