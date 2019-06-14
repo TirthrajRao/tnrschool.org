@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>T.N.Rao School</title>
 	<meta charset="utf-8">
@@ -16,7 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="icon" href="images/favicon.png">
 </head>
-
 <body style="overflow: hidden;">
 	<div id="loader-wrapper">
 		<div id="loader"></div>
@@ -97,8 +95,15 @@
 											Application</a>
 									</div>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="javascript:routeTo('resources')">Resources</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbardrop_resources" data-toggle="dropdown">Resources</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Academic Calender</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">CBSE Affiliation Letter</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">OASIS 2018-2019</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Ataff Information for CBSE</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Transfer Certificates</a>
+									</div>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="javascript:routeTo('contactUs')">Contact Us</a>
@@ -440,7 +445,5 @@
 	<script type="text/javascript" src="js/jquery.responsiveTabs.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
-	
 </body>
-
 </html>

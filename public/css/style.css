@@ -1406,7 +1406,8 @@ a.event_image_box h4.orange{
 }
 textarea.form-control {
     resize: none;
-    height: 100px;
+    height: 150px;
+    line-height: 25px;
 }
 select.form-control {
     -webkit-appearance: none;
@@ -1522,8 +1523,7 @@ a.document_title_with_icon h5 {
     left: 10px;
     right: 10px;
     margin: auto;
-    font-family: 'Grand Hotel', cursive;
-    font-size: 22px;
+    font-size: 16px;
     padding: 15px;
     border-radius: 10px;
     z-index: 11;
@@ -1555,17 +1555,48 @@ a.download_certificate i{
 .transferCertificate_section{
     padding: 70px 0px;
 }
+.page_pagination{
+    display: table;
+    width: 100%;
+    text-align: right;
+}
+.page_pagination ul {
+    margin: 0px;
+    padding: 0px;
+}
+.page_pagination ul li span, .page_pagination ul li a {
+    color: #333333;
+    font-size: 16px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 2px 0px;
+}
+.page_pagination ul li.active span, .page_pagination ul li a:hover {
+    background-color: #9ebe3b;
+    color: #fff;
+    border-color: transparent;
+}
+.page_pagination ul li {
+    display: inline-block;
+}
 /*resources page css end*/
 /*teachers application form page css start*/
 .teacher_application_from{
     padding: 70px 0px;
+    display: table;
+    width: 100%;
+    background-color: #f8f8f8;
 }
 .teacher_application_from .section_title_type_three h3:before, .teacher_application_from .section_title_type_three h3:after {
     background-color: #5fcde3;
 }
 label.upload_photo {
-    height: 200px;
-    width: 170px;
+    height: 240px;
+    width: 200px;
     margin: auto auto 20px;
     text-align: center;
     border: 2px solid #cbcbcb;
@@ -1581,4 +1612,53 @@ label.upload_photo {
     line-height: 38px;
     vertical-align: middle;
 }
+.teacher_application_from .r-tabs .r-tabs-nav {
+    display: none;
+}
+.teacher_application_from .r-tabs .r-tabs-accordion-title {
+    display: block;
+}
+.teacher_application_from .development_tab_content a.r-tabs-anchor{
+    margin: 20px 0px;
+}
+.teacher_application_from .development_tab_content .r-tabs-state-active a.r-tabs-anchor:after{
+    left: 99px;
+}
+.teacher_application_from .development_tab_content .r-tabs-panel{
+    margin: 20px 0px;
+}
+.teacher_application_from .development_tab_content .r-tabs-panel{
+    border-radius: 20px;
+}
+.teacher_application_from .development_tab_content a p{
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0px;
+}
+.single_family_member_detail hr{
+    margin-top: 0px;
+}
+.add_more_member,.add_education,.add_more_experience{
+    padding: 10px 20px;
+    float: right;
+    border-radius: 30px;
+}
+.teacher_application_from .development_tab_content p {
+    margin-bottom: 10px;
+    line-height: normal;
+    font-size: 16px;
+    color: #222;
+}
 /*teachers application form page css end*/
+/*after development changes css content start*/
+.page_not_found h2{
+    font-size: 200px;
+    padding: 100px 0px 0px;
+    font-family: 'Grand Hotel', cursive;
+    line-height: 200px;
+}
+.page_not_found h3{
+    font-size: 36px;
+    padding: 0px 0px 100px;
+}
+/*after development changes css content end*/

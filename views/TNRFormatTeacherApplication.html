@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>T.N.Rao School</title>
 	<meta charset="utf-8">
@@ -16,7 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="icon" href="images/favicon.png">
 </head>
-
 <body style="overflow: hidden;">
 	<div id="loader-wrapper">
 		<div id="loader"></div>
@@ -97,8 +95,15 @@
 											Format Teacher Application</a>
 									</div>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="javascript:routeTo('resources')">Resources</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbardrop_resources" data-toggle="dropdown">Resources</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Academic Calender</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">CBSE Affiliation Letter</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">OASIS 2018-2019</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Ataff Information for CBSE</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Transfer Certificates</a>
+									</div>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="javascript:routeTo('contactUs')">Contact Us</a>
@@ -136,348 +141,490 @@
 				<h2>T.N. Rao School For Girls Rajkot</h2>
 				<h3 class="text_blue">Application Form for Employment Personal Data</h3>
 			</div>
-			<div class="row flex-row-reverse">
-				<div class="col-xl-4">
-					<input type="file" id="upload_file" placeholder="Affix Recent Color Passport Size Photo."
-						style="display: none;">
-					<label class="upload_photo d-flex flex-wrap align-content-center bg-light" for="upload_file"><span
-							class="p-4">Affix Recent Color Passport Size Photo.</span></label>
+			<div id="development_tab" class="admission_inquiry" data-aos="fade-up" data-aos-duration="1000">
+				<ul class="development_tab_title row">
+					<li class="col-md-3 blue_arrow">
+						<a href="#tab-1">
+							<img src="images/icon_personalDetail.png" alt="tab icon">
+							<p>Personal Detail</p>
+						</a>
+					</li>
+					<li class="col-md-3 orange_arrow">
+						<a href="#tab-2">
+							<img src="images/icon_familyDetail.png" alt="tab icon">
+							<p>Family Detail</p>
+						</a>
+					</li>
+					<li class="col-md-3 pink_arrow">
+						<a href="#tab-3">
+							<img src="images/icon_profationalSkills.png" alt="tab icon">
+							<p>Profational Skills</p>
+						</a>
+					</li>
+					<li class="col-md-3 green_arrow">
+						<a href="#tab-4">
+							<img src="images/icon_references.png" alt="tab icon">
+							<p>References</p>
+						</a>
+					</li>
+					<li class="col-md-3 orange_arrow">
+						<a href="#tab-5">
+							<img src="images/icon_educationalDetails.png" alt="tab icon">
+							<p>Educational Details</p>
+						</a>
+					</li>
+					<li class="col-md-3 pink_arrow">
+						<a href="#tab-6">
+							<img src="images/icon_workExperience.png" alt="tab icon">
+							<p>Work Experience</p>
+						</a>
+					</li>
+				</ul>
+				<div class="development_tab_content blue_arrow active_tab_on_load">
+					<div id="tab-1">
+						<h4 class="text_blue">Personal Detail</h4>
+						<div class="row flex-row-reverse">
+							<div class="col-xl-4">
+								<input type="file" id="upload_file" placeholder="Affix Recent Color Passport Size Photo." style="display: none;">
+								<label class="upload_photo d-flex flex-wrap align-content-center bg-light" for="upload_file"><span class="p-4">Affix Recent Color Passport Size Photo.</span></label>
+							</div>
+							<div class="col-xl-8">
+								<div class="form-row">
+									<div class="col-12 form-group">
+										<input type="text" class="form-control" placeholder="Full Name *">
+									</div>
+									<div class="col-12 form-group">
+										<input type="text" class="form-control" placeholder="Father's/Husband's Name *">
+									</div>
+									<div class="col-12 form-group">
+										<input type="email" class="form-control" placeholder="E-mail *">
+									</div>
+									<div class="col-md-4 form-group">
+										<input type="text" class="form-control" id="datepicker1" placeholder="Birthdate *">
+									</div>
+									<div class="col-md-4 col-sm-6 form-group">
+										<input type="text" class="form-control" placeholder="Birthplace *">
+									</div>
+									<div class="col-md-4 col-sm-6 form-group">
+										<input type="text" class="form-control" placeholder="Nationality *">
+									</div>
+									<div class="col-md-6 form-group">
+										<p>Sex *</p>
+										<label class="form-check-label mr-3">
+											<input type="radio" name="sex" class="mr-2">Male
+										</label>
+										<label class="form-check-label">
+											<input type="radio" name="sex" class="mr-2">Female
+										</label>
+									</div>
+									<div class="col-md-6 form-group">
+										<p>Marital Status *</p>
+										<label class="form-check-label mr-3">
+											<input type="radio" name="maritalStatus" class="mr-2">Married
+										</label>
+										<label class="form-check-label mr-3">
+											<input type="radio" name="maritalStatus" class="mr-2">Single
+										</label>
+										<label class="form-check-label">
+											<input type="radio" name="maritalStatus" class="mr-2">Divorced
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-md-6 form-group">
+								<input type="text" class="form-control" placeholder="Aadhar *">
+							</div>
+							<div class="col-md-6 form-group">
+								<input type="text" class="form-control" placeholder="PAN *">
+							</div>
+							<div class="col-md-3 col-sm-6 form-group">
+								<input type="text" class="form-control" placeholder="Religion *">
+							</div>
+							<div class="col-md-3 col-sm-6 form-group">
+								<input type="text" class="form-control" placeholder="Cast *">
+							</div>
+							<div class="col-md-3 col-sm-6 form-group">
+								<input type="text" class="form-control" placeholder="Sub Cast *">
+							</div>
+							<div class="col-md-3 col-sm-6 form-group">
+								<select class="form-control">
+									<option disabled selected>Category *</option>
+									<option>SC</option>
+									<option>ST</option>
+									<option>OBC</option>
+									<option>GEN</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<textarea class="form-control" placeholder="Present Address *"></textarea>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="City & PIN *">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<textarea class="form-control" placeholder="Permanent Address *"></textarea>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="City & PIN *">
+								</div>
+							</div>
+							<div class="col-12">
+								<p>Contact Detail:</p>
+							</div>
+							<div class="col-md-3 col-sm-6 form-group">
+								<input type="text" class="form-control" placeholder="Personal *">
+							</div>
+							<div class="col-md-3 col-sm-6 form-group">
+								<input type="text" class="form-control" placeholder="Residence *">
+							</div>
+							<div class="col-md-3 col-sm-6 form-group">
+								<input type="text" class="form-control" placeholder="Father's/Husband's *">
+							</div>
+							<div class="col-md-3 col-sm-6 form-group">
+								<input type="text" class="form-control" placeholder="Other">
+							</div>
+							<div class="col-12 form-group">
+								<textarea class="form-control" placeholder="Indicate major illness in the past 5 years if any"></textarea>
+							</div>
+						</div>
+						<div class="two_btn_div">
+							<span class="next_step float-right text_orange">Next step!<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+						</div>
+					</div>
 				</div>
-				<div class="col-xl-8">
-					<div class="row">
-						<div class="col-12 form-group">
-							<input type="text" class="form-control" placeholder="First Name *">
+				<div class="development_tab_content orange_arrow">
+					<div id="tab-2">
+						<h4 class="text_orange">Family Detail</h4>
+						<div class="all_family_members">
+							<div class="single_family_member_detail">
+								<div class="form-row">
+									<div class="col-sm-6 form-group">
+										<input type="text" class="form-control" placeholder="Name">
+									</div>
+									<div class="col-sm-3 col-6 form-group">
+										<input type="text" class="form-control" placeholder="Age">
+									</div>
+									<div class="col-sm-3 col-6 form-group">
+										<input type="text" class="form-control" placeholder="M/F">
+									</div>
+									<div class="col-sm-6 form-group">
+										<input type="text" class="form-control" placeholder="Relation With Applicant">
+									</div>
+									<div class="col-sm-6 form-group">
+										<input type="text" class="form-control" placeholder="Occupation">
+									</div>
+								</div>
+								<hr>
+							</div>
 						</div>
-						<div class="col-12 form-group">
-							<input type="text" class="form-control" placeholder="Father's/Husband's Name *">
+						<a href="javascript:void(0);" class="bg_green text-white add_more_member">Add Family Member</a>
+						<div class="two_btn_div">
+							<span class="prev_step float-left text_blue"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous Step!</span>
+							<span class="next_step float-right text_pink">Next Step!<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
 						</div>
-						<div class="col-12 form-group">
-							<input type="text" class="form-control" placeholder="Last Name *">
-						</div>
-						<div class="col-12 form-group">
-							<div class="form-row">
-								<div class="col-sm-6">
-									<p>Sex *</p>
-									<label class="form-check-label mr-3">
-										<input type="radio" name="sex" class="mr-2">Male
+					</div>
+				</div>
+				<div class="development_tab_content pink_arrow">
+					<div id="tab-3">
+						<h4 class="text_pink">Profational Skills</h4>
+						<div class="form-row">
+							<div class="col-md-6 form-group">
+								<select class="form-control post_apply_for">
+									<option disabled selected>Post Applied For *</option>
+									<option value="Teacher">Teacher</option>
+									<option value="TeachingAssistant">Teaching Assistant</option>
+									<option value="OfficeAssistant">Office Assistant</option>
+									<option value="ActivityTeacher">Activity Teacher</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<div class="col-md-6 form-group">
+								<input type="text" class="form-control" placeholder="Minimum Expected Consolidated Salary *">
+							</div>
+							<div class="subject_and_class" style="display: none;">
+								<div class="row">
+									<div class="col-md-6 subject_in_class">
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Subject 1" class="form-control">
+											</div>
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Class" class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 subject_in_class">
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Subject 2" class="form-control">
+											</div>
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Class" class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 subject_in_class">
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Subject 3" class="form-control">
+											</div>
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Class" class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 subject_in_class">
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Subject 4" class="form-control">
+											</div>
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Class" class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 subject_in_class">
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Subject 5" class="form-control">
+											</div>
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Class" class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 subject_in_class">
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Subject 6" class="form-control">
+											</div>
+											<div class="col-md-6 mb-3">
+												<input type="text" placeholder="Class" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<p>Tick skills / activities that you can teach or conduct (use additional sheets if necessary to indicate other skills that you can teach):</p>
+								<div class="form-row">
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Yoga
 									</label>
-									<label class="form-check-label">
-										<input type="radio" name="sex" class="mr-2">Female
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Debating
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Public Speaking
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">NCC
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Pottery
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Folk Dance
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Indian Classical Dance
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Aerobics
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Elocution
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Story Telling
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Scouts Guides
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Ceramics
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Folk Music
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">W. Classical Dance
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Photography
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Cultural Exch.
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Astronomy
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Environment
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Paper Craft
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Horticulture
+									</label>
+									<label class="form-check-label mb-2 col-md-4 col-lg-3 col-sm-6">
+										<input type="checkbox" class="mr-2">Sports (Specify Games)
 									</label>
 								</div>
-								<div class="col-sm-6">
-									<p>Marital Status *</p>
-									<label class="form-check-label mr-3">
-										<input type="radio" name="maritalStatus" class="mr-2">Married
-									</label>
-									<label class="form-check-label mr-3">
-										<input type="radio" name="maritalStatus" class="mr-2">Single
-									</label>
-									<label class="form-check-label">
-										<input type="radio" name="maritalStatus" class="mr-2">Divorced
-									</label>
+							</div>
+						</div>
+						<div class="two_btn_div">
+							<span class="prev_step float-left text_orange"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous Step!</span>
+							<span class="next_step float-right text_green">Next Step!<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+						</div>
+					</div>
+				</div>
+				<div class="development_tab_content green_arrow">
+					<div id="tab-4">
+						<h4 class="text_green">References</h4>
+						<div class="form-row">
+							<div class="col-12">
+								<p>References (Please indicate the name of two persons who know you well but are not related to you.) :</p>
+								<div class="form-row">
+									<div class="col-md-6">
+										<p>Reference 1:</p>
+										<div class="form-group">
+											<input type="text" placeholder="Name" class="form-control">
+										</div>
+										<div class="form-group">
+											<input type="text" placeholder="Occupation" class="form-control">
+										</div>
+										<div class="form-group">
+											<input type="text" placeholder="Designation" class="form-control">
+										</div>
+										<div class="form-group">
+											<input type="text" placeholder="Phone" class="form-control">
+										</div>
+										<div class="form-group">
+											<textarea placeholder="Address" class="form-control"></textarea>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<p>Reference 2:</p>
+										<div class="form-group">
+											<input type="text" placeholder="Name" class="form-control">
+										</div>
+										<div class="form-group">
+											<input type="text" placeholder="Occupation" class="form-control">
+										</div>
+										<div class="form-group">
+											<input type="text" placeholder="Designation" class="form-control">
+										</div>
+										<div class="form-group">
+											<input type="text" placeholder="Phone" class="form-control">
+										</div>
+										<div class="form-group">
+											<textarea placeholder="Address" class="form-control"></textarea>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="form-row">
-				<div class="col-md-4 form-group">
-					<input type="text" class="form-control" id="datepicker1" placeholder="Birthdate *">
-				</div>
-				<div class="col-md-4 form-group">
-					<input type="text" class="form-control" placeholder="Birthplace *">
-				</div>
-				<div class="col-md-4 form-group">
-					<input type="text" class="form-control" placeholder="Nationality *">
-				</div>
-				<div class="col-md-4 form-group">
-					<input type="text" class="form-control" placeholder="Religion *">
-				</div>
-				<div class="col-md-4 form-group">
-					<input type="text" class="form-control" placeholder="Aadhar *">
-				</div>
-				<div class="col-md-4 form-group">
-					<input type="text" class="form-control" placeholder="PAN *">
-				</div>
-				<div class="col-md-4 form-group">
-					<input type="text" class="form-control" placeholder="Cast *">
-				</div>
-				<div class="col-md-4 form-group">
-					<input type="text" class="form-control" placeholder="Sub Cast *">
-				</div>
-				<div class="col-md-4 form-group">
-					<select class="form-control">
-						<option disabled selected>Category *</option>
-						<option>SC</option>
-						<option>ST</option>
-						<option>OBC</option>
-						<option>GEN</option>
-					</select>
-				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<textarea class="form-control" placeholder="Present Address *"></textarea>
-					</div>
-					<div class="form-row">
-						<div class="col-md-6 form-group">
-							<input type="text" class="form-control" placeholder="City & PIN *">
-						</div>
-						<div class="col-md-6 form-group">
-							<input type="email" class="form-control" placeholder="E-mail *">
+						<div class="two_btn_div">
+							<span class="prev_step float-left text_pink"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous Step!</span>
+							<span class="next_step float-right text_blue">Next Step!<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<textarea class="form-control" placeholder="Permanent Address *"></textarea>
-					</div>
-					<div class="form-row">
-						<div class="col-md-6 form-group">
-							<input type="text" class="form-control" placeholder="City & PIN *">
-						</div>
-						<div class="col-md-6 form-group">
-							<input type="email" class="form-control" placeholder="E-mail *">
-						</div>
-					</div>
-				</div>
-				<div class="col-12">
-					<p>Contact No.:</p>
-					<div class="form-row">
-						<div class="col-md-3 form-group">
-							<input type="text" class="form-control" placeholder="Personal *">
-						</div>
-						<div class="col-md-3 form-group">
-							<input type="text" class="form-control" placeholder="Residence *">
-						</div>
-						<div class="col-md-3 form-group">
-							<input type="text" class="form-control" placeholder="Father's/Husband's *">
-						</div>
-						<div class="col-md-3 form-group">
-							<input type="text" class="form-control" placeholder="Other">
-						</div>
-					</div>
-					<hr>
-				</div>
-				<div class="col-12">
-					<p>Details of Family Members:</p>
-					<div class="form-row">
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Neme">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Age">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="M/F">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Relation With Applicant">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Occupation">
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Neme">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Age">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="M/F">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Relation With Applicant">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Occupation">
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Neme">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Age">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="M/F">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Relation With Applicant">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Occupation">
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Neme">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Age">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="M/F">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Relation With Applicant">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Occupation">
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Neme">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Age">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="M/F">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Relation With Applicant">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Occupation">
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Neme">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Age">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="M/F">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Relation With Applicant">
-						</div>
-						<div class="col form-group">
-							<input type="text" class="form-control" placeholder="Occupation">
-						</div>
-					</div>
-					<hr>
-					<div class="form-group">
-						<textarea class="form-control"
-							placeholder="Indicate major illness in the past five years if any"></textarea>
-					</div>
-					<div class="form-group">
-						<select class="form-control">
-							<option disabled selected>Post Applied For *</option>
-							<option>Teacher</option>
-							<option>Teaching Assistant</option>
-							<option>Office Assistant</option>
-							<option>Activity Teacher</option>
-							<option>Other</option>
-						</select>
-					</div>
-					<hr>
-				</div>
-				<div class="col-12">
-					<p>Indicate in order of preference subjects and class you would like to teach if applied as a
-						teacher :</p>
-					<div class="row">
-						<div class="col-md-6 subject_in_class">
-							<div class="form-row">
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Subject 1" class="form-control">
+				<div class="development_tab_content blue_arrow">
+					<div id="tab-5">
+						<h4 class="text_blue">Educational Details</h4>
+						<div class="all_education_detial">
+							<div class="single_education">
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<select class="form-control course_select">
+											<option selected disabled>Course</option>
+											<option value="SSC">SSC</option>
+											<option value="HSC">HSC</option>
+											<option value="Graduation">Graduation</option>
+											<option value="PostGraduation">Post Graduation</option>
+											<option value="Professional">Professional</option>
+											<option value="Other">Other</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<input type="text" class="form-control" placeholder="Name of Institute & City">
+									</div>
+									<div class="form-group col-md-6">
+										<input type="text" class="form-control" placeholder="University/Board">
+									</div>
+									<div class="form-group col-md-6">
+										<input type="text" class="form-control" placeholder="Year of Completion">
+									</div>
+									<div class="form-group col-md-6">
+										<select class="form-control">
+											<option selected disabled>Medium of Instruction</option>
+											<option>English</option>
+											<option>Gujarati</option>
+											<option>Hindi</option>
+											<option>Other</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<input type="text" class="form-control disable_for_HSC_and_SSC" placeholder="Degree Obtained" disabled="disabled">
+									</div>
+									<div class="form-group col-md-6">
+										<input type="text" class="form-control" placeholder="Marks Obtained">
+									</div>
+									<div class="form-group col-md-6">
+										<input type="text" class="form-control" placeholder="Subjects">
+									</div>
 								</div>
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Class" class="form-control">
-								</div>
+								<hr>
 							</div>
 						</div>
-						<div class="col-md-6 subject_in_class">
-							<div class="form-row">
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Subject 2" class="form-control">
-								</div>
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Class" class="form-control">
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 subject_in_class">
-							<div class="form-row">
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Subject 3" class="form-control">
-								</div>
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Class" class="form-control">
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 subject_in_class">
-							<div class="form-row">
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Subject 4" class="form-control">
-								</div>
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Class" class="form-control">
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 subject_in_class">
-							<div class="form-row">
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Subject 5" class="form-control">
-								</div>
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Class" class="form-control">
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 subject_in_class">
-							<div class="form-row">
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Subject 6" class="form-control">
-								</div>
-								<div class="col-md-6 mb-3">
-									<input type="text" placeholder="Class" class="form-control">
-								</div>
-							</div>
+						<a href="javascript:void(0);" class="bg_pink text-white add_education">Add Education</a>
+						<div class="two_btn_div">
+							<span class="prev_step float-left text_green"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous Step!</span>
+							<span class="next_step float-right text_orange">Next Step!<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
 						</div>
 					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Minimum Expected Consolidated Salary">
-					</div>
-					<div class="form-group">
-						<textarea class="form-control" placeholder="Any other expectations"></textarea>
-					</div>
-					<div class="form-group">
-						<select class="form-control">
-							<option disabled selected>Tick skills / activities that you can teach or conduct (use
-								additional sheets if necessary to indicate other skills that you can teach)</option>
-							<option>Yoga</option>
-							<option>Debating</option>
-							<option>Public Speaking</option>
-							<option>NCC</option>
-							<option>Pottery</option>
-							<option>Folk Dance</option>
-							<option>Indian Classical Dance</option>
-							<option>Aerobics</option>
-							<option>Elocution</option>
-							<option>Story Telling</option>
-							<option>Scouts Guides</option>
-							<option>Ceramics</option>
-							<option>Folk Music</option>
-							<option>W. Classical Dance</option>
-							<option>Photography</option>
-							<option>Cultural Exch.</option>
-							<option>Astronomy</option>
-							<option>Environment</option>
-							<option>Paper Craft</option>
-							<option>Horticulture</option>
-							<option>Sports (Specify Games)</option>
-						</select>
+				</div>
+				<div class="development_tab_content orange_arrow">
+					<div id="tab-6">
+						<h4 class="text_orange">Work Experience</h4>
+						<div class="all_experience">
+							<div class="single_experience">
+								<div class="form-row">
+									<div class="col-12 form-group">
+										<input type="text" placeholder="Name of Organization & City" class="form-control">
+									</div>
+									<div class="col-lg-3 col-sm-6 form-group">
+										<input type="text" id="datepicker2" placeholder="From" class="form-control">
+									</div>
+									<div class="col-lg-3 col-sm-6 form-group">
+										<input type="text" id="datepicker3" placeholder="To" class="form-control">
+									</div>
+									<div class="col-lg-3 col-sm-6 form-group">
+										<input type="text" placeholder="Duration" class="form-control">
+									</div>
+									<div class="col-lg-3 col-sm-6 form-group">
+										<input type="text" placeholder="Last Salary" class="form-control">
+									</div>
+									<div class="col-md-12 form-group">
+										<textarea placeholder="Responsibilities (Please mention classes and subjects taught if applicable)" class="form-control"></textarea>
+									</div>
+								</div>
+								<hr>
+							</div>
+						</div>
+						<a href="javascript:void(0);" class="bg_green text-white add_more_experience">Add Family Member</a>
+						<div class="two_btn_div">
+							<span class="prev_step float-left text_blue"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous Step!</span>
+							<button type="submit" class="submit_form float-right text_pink">Apply<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -593,7 +740,5 @@
 	<script type="text/javascript" src="js/jquery.responsiveTabs.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
-	
 </body>
-
 </html>

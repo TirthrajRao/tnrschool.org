@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>T.N.Rao School</title>
 	<meta charset="utf-8">
@@ -16,7 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="icon" href="images/favicon.png">
 </head>
-
 <body style="overflow: hidden;">
 	<div id="loader-wrapper">
 		<div id="loader"></div>
@@ -53,7 +51,7 @@
 									<a class="nav-link" href="javascript:routeTo('index')">Home</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link active" href="javascript:routeTo('about')">About Us</a>
+									<a class="nav-link" href="javascript:routeTo('about')">About Us</a>
 								</li>
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="javascript:void(0);"
@@ -97,8 +95,15 @@
 											Teacher Application</a>
 									</div>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="javascript:routeTo('resources')">Resources</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbardrop_resources" data-toggle="dropdown">Resources</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Academic Calender</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">CBSE Affiliation Letter</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">OASIS 2018-2019</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Ataff Information for CBSE</a>
+										<a class="dropdown-item" href="javascript:routeTo('resources')">Transfer Certificates</a>
+									</div>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="javascript:routeTo('contactUs')">Contact Us</a>
@@ -110,9 +115,12 @@
 			</div>
 		</div>
 	</header>
-	<section>
-        <div class="container">
-            <h2>404 page not found</h2>
+	<section class="page_not_found">
+		<div class="container">
+			<div class="text-center">
+				<h2 class="text_orange">404</h2>
+				<h3 class="text-dark">page not found</h3>
+			</div>
         </div>
     </section>
 	<footer>
@@ -225,7 +233,5 @@
 	<script type="text/javascript" src="js/jquery.responsiveTabs.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
-	
 </body>
-
 </html>

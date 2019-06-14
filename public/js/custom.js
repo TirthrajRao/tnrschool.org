@@ -7,9 +7,6 @@ function routeTo(page) {
 	window.location.pathname = page;
 }
 $(document).ready(function(){
-
-
-
 	$('.next_step').click(function () {
         $('.admission_inquiry .r-tabs-state-active').next('.r-tabs-state-default').children('.r-tabs-anchor').trigger('click');
     });
@@ -63,10 +60,8 @@ $(document).ready(function(){
 			animation: 'slide'
 		});
     });
-    setTimeout(function(){
-    	if($(window).width() < 768){
-    		$('.admission_inquiry .development_tab_content.blue_arrow .r-tabs-anchor').trigger('click');
-    	}
+	setTimeout(function(){
+		$('.admission_inquiry .development_tab_content.active_tab_on_load .r-tabs-anchor').trigger('click');
 	},100);
 
 	$(".back_to_top").click(function(event) {
@@ -139,10 +134,131 @@ $(document).ready(function(){
 	}
 
 	$(function() {
-		$("#datepicker,#datepicker1").datepicker({
+		$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker({
 			changeMonth: true,
 			changeYear: true,
 			dateFormat: 'dd/mm/yy'
 		});
+	});
+
+	$('a.add_more_member').click(function(){
+		var addFamilyMember = (`<div class="single_family_member_detail">
+			<div class="form-row">
+			<div class="col-sm-6 form-group">
+			<input type="text" class="form-control" placeholder="Name">
+			</div>
+			<div class="col-sm-3 col-6 form-group">
+			<input type="text" class="form-control" placeholder="Age">
+			</div>
+			<div class="col-sm-3 col-6 form-group">
+			<input type="text" class="form-control" placeholder="M/F">
+			</div>
+			<div class="col-sm-6 form-group">
+			<input type="text" class="form-control" placeholder="Relation With Applicant">
+			</div>
+			<div class="col-sm-6 form-group">
+			<input type="text" class="form-control" placeholder="Occupation">
+			</div>
+			</div>
+			<hr>
+			</div>`);
+		$(".all_family_members").append(addFamilyMember);
+	});
+	
+	$('a.add_more_experience').click(function(){
+		var addFamilyMember = (`<div class="single_experience">
+			<div class="form-row">
+			<div class="col-12 form-group">
+			<input type="text" placeholder="Name of Organization & City" class="form-control">
+			</div>
+			<div class="col-lg-3 col-sm-6 form-group">
+			<input type="text" id="datepicker2" placeholder="From" class="form-control">
+			</div>
+			<div class="col-lg-3 col-sm-6 form-group">
+			<input type="text" id="datepicker3" placeholder="To" class="form-control">
+			</div>
+			<div class="col-lg-3 col-sm-6 form-group">
+			<input type="text" placeholder="Duration" class="form-control">
+			</div>
+			<div class="col-lg-3 col-sm-6 form-group">
+			<input type="text" placeholder="Last Salary" class="form-control">
+			</div>
+			<div class="col-md-12 form-group">
+			<textarea placeholder="Responsibilities (Please mention classes and subjects taught if applicable)" class="form-control"></textarea>
+			</div>
+			</div>
+			<hr>
+			</div>`);
+		$(".all_experience").append(addFamilyMember);
+	});
+
+	$('a.add_education').click(function(){
+		var addEducation = (`<div class="single_education">
+			<div class="form-row">
+			<div class="form-group col-md-6">
+			<select class="form-control course_select">
+			<option selected disabled>Course</option>
+			<option value="SSC">SSC</option>
+			<option value="HSC">HSC</option>
+			<option value="Graduation">Graduation</option>
+			<option value="PostGraduation">Post Graduation</option>
+			<option value="Professional">Professional</option>
+			<option value="Other">Other</option>
+			</select>
+			</div>
+			<div class="form-group col-md-6">
+			<input type="text" class="form-control" placeholder="Name of Institute & City">
+			</div>
+			<div class="form-group col-md-6">
+			<input type="text" class="form-control" placeholder="University/Board">
+			</div>
+			<div class="form-group col-md-6">
+			<input type="text" class="form-control" placeholder="Year of Completion">
+			</div>
+			<div class="form-group col-md-6">
+			<select class="form-control">
+			<option selected disabled>Medium of Instruction</option>
+			<option>English</option>
+			<option>Gujarati</option>
+			<option>Hindi</option>
+			<option>Other</option>
+			</select>
+			</div>
+			<div class="form-group col-md-6">
+			<input type="text" class="form-control disable_for_HSC_and_SSC" placeholder="Degree Obtained" disabled="disabled">
+			</div>
+			<div class="form-group col-md-6">
+			<input type="text" class="form-control" placeholder="Marks Obtained">
+			</div>
+			<div class="form-group col-md-6">
+			<input type="text" class="form-control" placeholder="Subjects">
+			</div>
+			</div>
+			<hr>
+			</div>`);
+		$(".all_education_detial").append(addEducation);
+		$('.course_select').on('change', function(){
+			if(this.value == 'Graduation' || this.value == 'PostGraduation' || this.value == 'Professional' || this.value == 'Other'){
+				$(this).parents('.single_education').children('.form-row').children('.form-group').children('.disable_for_HSC_and_SSC').removeAttr("disabled");
+			}else{
+				$(this).parents('.single_education').children('.form-row').children('.form-group').children('.disable_for_HSC_and_SSC').attr('disabled', 'disabled');
+			}
+		});
+	});
+
+	$('.post_apply_for').on('change', function(){
+		if(this.value == 'Teacher'){
+			$('.subject_and_class').fadeIn();
+		}else{
+			$('.subject_and_class').fadeOut();
+		}
+	});
+
+	$('.course_select').on('change', function(){
+		if(this.value == 'Graduation' || this.value == 'PostGraduation' || this.value == 'Professional' || this.value == 'Other'){
+			$(this).parents('.single_education').children('.form-row').children('.form-group').children('.disable_for_HSC_and_SSC').removeAttr("disabled");
+		}else{
+			$(this).parents('.single_education').children('.form-row').children('.form-group').children('.disable_for_HSC_and_SSC').attr('disabled', 'disabled');
+		}
 	});
 });
