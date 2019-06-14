@@ -49,7 +49,8 @@ function listAlbums() {
     });
 }
 
-function viewAlbum(albumName) {
+function viewAlbum(albumName, page = 1) {
+    // console.log("the perameters", albumName, page)
     var albumPhotosKey = encodeURIComponent(albumName) + '/';
     s3.listObjects({ Prefix: albumPhotosKey }, function (err, data) {
         if (err) {
@@ -60,8 +61,8 @@ function viewAlbum(albumName) {
         var href = this.request.httpRequest.endpoint.href;
         var bucketUrl = href + albumBucketName + '/';
 
-        var photos = data.Contents.map(function (photo) {
-            if (photo.Size > 0) {
+        var photos = data.Contents.map(function (photo, index) {
+            if (photo.Size > 0 && index>=((page-1)*25 - 1) && index<=(page*25 - 1)) {
                 var photoKey = photo.Key;
                 var photoUrl = bucketUrl + encodeURIComponent(photoKey);
                 return getHtml([
@@ -77,6 +78,16 @@ function viewAlbum(albumName) {
                 ]);
             }
         });
+        // console.log("photoes in js file", photos);
+        var noOfPages = Math.ceil(photos.length / 25);
+        // console.log("noOfPage in js file", noOfPages);
+        var pageArray = new Array(noOfPages).fill(0);
+        // console.log("pageArray in js file", pageArray);
+        var pages = pageArray.map(function (val, index) {
+            return getHtml([
+                '<li><a href="javascript:viewAlbum(\'' + albumName + '\','+(index+1)+');">'+(index+1)+'</a></li>',
+            ])
+        })
         var htmlTemplate = [
             '<div>',
             '<table>',
@@ -90,6 +101,13 @@ function viewAlbum(albumName) {
             getHtml(photos),
             '</tbody>',
             '</table>',
+            '<div class="page_pagination">',
+            '<ul>',
+            '<li><a href="javascript:viewAlbum(\'' + albumName + '\','+(page-1)+');"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>',
+            getHtml(pages),
+            '<li><a href="javascript:viewAlbum(\'' + albumName + '\','+(page+1)+');"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>',
+            '</ul>',
+            '</div>',
             '</div>',
         ]
         document.getElementById('tableData').innerHTML = getHtml(htmlTemplate);
