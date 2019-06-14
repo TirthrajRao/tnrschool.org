@@ -112,6 +112,7 @@
 	.next_previous_content {width: calc(100% - 84px);}
 	.footer_content h4{padding: 10px 0px 5px;}
 	.modal-title{font-size: 22px;}
+	.subject_in_class:nth-child(2n+1):after{display: none;}
 	.home_about_section, .testimonial_section, .events_section, .all_event_section, .about_school_section, .student_corner_and_event_detail_section,.transferCertificate_section, .teacher_application_from, .resources_document_section, .art_education_section, .work_flow_section, .work_flow_tech_environment, .work_flow_facility, .student_corner_posts_section, .intellectual_development_tab_section, .computer_lab_section, .safety_and_security, .safe_campus_section,.get_in_touch_form_section ,.contact_info_section{padding: 45px 0px;}
 }
 @media (max-width: 575px){
