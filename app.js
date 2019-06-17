@@ -16,14 +16,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, './public')));
 
 app.use((req, res, next) => {
   var file = req.url.replace('/', "");
   console.log('req.url = ', file.length);
   if (file.length && fs.existsSync(path.join(__dirname, 'views') + '/' + file + '.html'))
     res.render(file, { title: 'ejs' });
-  else if (file.length === 0)
+  else if (file.length === 0 || file === 'tnrschool')
     res.render('index', { title: 'ejs' });
   else
     res.render('notFound', { title: 'ejs' });
