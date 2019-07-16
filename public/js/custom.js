@@ -6,7 +6,11 @@ $(window).on('load',function() {
 function routeTo(page) {
 	window.location.pathname = page;
 }
+$(window).on('load resize',function() {
+	AOS.init();
+});
 $(document).ready(function(){
+
 	$('.next_step').click(function () {
         $('.admission_inquiry .r-tabs-state-active').next('.r-tabs-state-default').children('.r-tabs-anchor').trigger('click');
     });
@@ -101,8 +105,6 @@ $(document).ready(function(){
 			$(this).prev(".more_btn").fadeIn("fast");
 		});
 	});
-
-	AOS.init();
 
 	$(".banner_text h2 .title").lettering();
 	$(".banner_text h3").lettering();
