@@ -1255,7 +1255,6 @@ a.event_image_box h4.orange{
 /*events page css start*/
 .all_event_section{
     padding: 50px 0px;
-    background-color: #f8f8f8;
 }
 .all_event_section .section_title_type_three h3:before, .all_event_section .section_title_type_three h3:after{
     background-color: #e16898;

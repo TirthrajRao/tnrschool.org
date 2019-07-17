@@ -6,9 +6,6 @@ $(window).on('load',function() {
 function routeTo(page) {
 	window.location.pathname = page;
 }
-$(window).on('load resize',function() {
-	AOS.init();
-});
 $(document).ready(function(){
 
 	$('.next_step').click(function () {
@@ -263,4 +260,6 @@ $(document).ready(function(){
 			$(this).parents('.single_education').children('.form-row').children('.form-group').children('.disable_for_HSC_and_SSC').attr('disabled', 'disabled');
 		}
 	});
+	
+	AOS.init();
 });
