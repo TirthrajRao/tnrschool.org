@@ -13,8 +13,8 @@
 	.work_image{height: 200px;}
 	.computer_lab_section .about_content h4{font-size: 20px;}
 	.page_title h1{padding: 30px 0px;font-size: 36px;}
-	.white_box p{font-size: 18px; line-height: 30px;}
-	.development_tab_title li a img,.development_tab_content a img {max-width: 55px;}
+	.white_box p{font-size: 18px; line-height: 28px;}
+	.development_tab_title li a img,.development_tab_content a img {max-width: 52px;}
 	.page_breadcrumb ul li{font-size: 14px;}
 	.detail_description_content p{padding-top: 20px;}
 	.teacher_application_from .development_tab_content a p{font-size: 24px;}
@@ -80,7 +80,7 @@
 	.contact_info_icon, .contact_info_text{display: block;text-align: center;padding: 0;}
 	.teacher_application_from .development_tab_content a p{font-size: 20px;}
 	.add_more_member, .add_education, .add_more_experience {padding: 6px 20px;font-size: 14px;}
-	.work_content:before{height: 30px; top: -30px;}
+	.work_content:before{height: 30px; top: -29px;}
 }
 @media (max-width: 767px){
 	.testimonial_card p{min-height: 1px; max-height: none;}
@@ -99,13 +99,14 @@
 	.white_box{margin-top: 0px;}
 	.submitted_posts_section{padding-top: 20px;}
 	.development_tab_content a p br{display: none;}
-	.development_tab_content a p{font-size: 15px; padding-left: 8px;}
+	.curricular_activities_section .development_tab_content a p br{display: block;}
+	.development_tab_content a p{font-size: 15px; padding-left: 8px; line-height: 24px;}
 	.development_tab_content .r-tabs-panel,.teacher_application_from .development_tab_content .r-tabs-panel{padding: 15px; margin: 10px 0px; border-radius: 15px;}
 	.development_tab_content a.r-tabs-anchor,.teacher_application_from .development_tab_content a.r-tabs-anchor{margin: 10px 0px;}
 	.text_section{padding: 25px 0px;}
 	.development_tab_content ul li{font-size: 14px; line-height: 24px;}
 	.text_section h6{font-size: 16px; line-height: 30px;}
-	.development_tab_title li.r-tabs-state-active a.r-tabs-anchor:after,.development_tab_content .r-tabs-state-active a.r-tabs-anchor:after,.teacher_application_from .development_tab_content .r-tabs-state-active a.r-tabs-anchor:after{left: 68px; bottom: -8px;}
+	.development_tab_title li.r-tabs-state-active a.r-tabs-anchor:after,.development_tab_content .r-tabs-state-active a.r-tabs-anchor:after,.teacher_application_from .development_tab_content .r-tabs-state-active a.r-tabs-anchor:after{left: 68px; bottom: -12px;}
 	.other_student_corner_detail_page .link_for_other_student_corner{width: 250px;}
 	.next_previous_content p{font-size: 13px;}
 	.next_previous_content h4{font-size: 20px;}
@@ -114,7 +115,7 @@
 	.footer_content h4{padding: 10px 0px 5px;}
 	.modal-title{font-size: 22px;}
 	.subject_in_class:nth-child(2n+1):after{display: none;}
-	.work_content:before {height: 27px;top: -25px;}
+	.work_content:before {height: 27px;top: -26px;}
 	.home_about_section, .testimonial_section, .events_section, .all_event_section, .about_school_section, .student_corner_and_event_detail_section,.transferCertificate_section, .teacher_application_from, .resources_document_section, .art_education_section, .work_flow_section, .work_flow_tech_environment, .work_flow_facility, .student_corner_posts_section, .intellectual_development_tab_section, .computer_lab_section, .safety_and_security, .safe_campus_section,.get_in_touch_form_section ,.contact_info_section{padding: 45px 0px;}
 }
 @media (max-width: 575px){
@@ -147,4 +148,7 @@
 	.next_previous_content{width: 100%; padding: 0!important}
 	.teacher_application_from .section_title_type_three h3:before, .teacher_application_from .section_title_type_three h3:after{display: none;}
 	.section_title_type_one h3, .section_title_type_two h3{font-size: 20px;}
+}
+@media (max-width: 439px){
+	.work_content:before {height: 17px;top: -16px;}
 }

@@ -261,5 +261,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	AOS.init();
+	setTimeout(function(){
+		AOS.init();
+	}, 300);
 });
