@@ -12,6 +12,20 @@
     "express": "~4.16.0",
     "http-errors": "^1.7.2",
     "jade": "~1.11.0",
-    "morgan": "~1.9.0"
-  }
+    "morgan": "~1.9.0",
+    "tedious": "^6.2.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TirthrajRao/tnrschool.org.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TirthrajRao/tnrschool.org/issues"
+  },
+  "homepage": "https://github.com/TirthrajRao/tnrschool.org#readme",
+  "description": ""
 }
