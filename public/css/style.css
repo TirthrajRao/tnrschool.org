@@ -745,6 +745,15 @@ a.event_image_box h4.blue{
 a.event_image_box h4.orange{
     background-color: rgba(242, 111, 41, 0.8);
 }
+.load_more_event a {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 18px;
+}
 /*event section css end*/
 /*footer css start*/
 .footer_top {
