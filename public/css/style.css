@@ -1742,6 +1742,10 @@ label.upload_photo {
     min-height: 100px;
     position: relative;
 }
+.recaptcha_container {
+    display: inline-block;
+    width: 100%;
+}
 /*after development changes css content end*/
 
 /*responsive css start*/
